@@ -20,37 +20,42 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="涉猎的主要编程语言为 Python、Java、Go，领域涵盖服务研发、对象存储等。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Noel-CyberSpace">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="一、Spring Boot 入门1、Spring Boot 简介 简化Spring应用开发的一个框架； 整个Spring技术栈的一个大整合； J2EE开发的一站式解决方案；  2、微服务2014，martin fowler 微服务：架构风格（服务微化） 一个应用应该是一组小型服务；可以通过HTTP的方式进行互通； 单体应用：ALL IN ONE 微服务：每一个功能元素最终都是一个可独立替换和独立升">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot基础">
+<meta property="og:url" content="http://yoursite.com/2020/05/09/SpringBoot%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="Noel-CyberSpace">
-<meta property="og:description" content="涉猎的主要编程语言为 Python、Java、Go，领域涵盖服务研发、对象存储等。">
+<meta property="og:description" content="一、Spring Boot 入门1、Spring Boot 简介 简化Spring应用开发的一个框架； 整个Spring技术栈的一个大整合； J2EE开发的一站式解决方案；  2、微服务2014，martin fowler 微服务：架构风格（服务微化） 一个应用应该是一组小型服务；可以通过HTTP的方式进行互通； 单体应用：ALL IN ONE 微服务：每一个功能元素最终都是一个可独立替换和独立升">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/05/09/SpringBoot%E5%9F%BA%E7%A1%80/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/05/09/SpringBoot%E5%9F%BA%E7%A1%80/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/05/09/SpringBoot%E5%9F%BA%E7%A1%80/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/05/09/SpringBoot%E5%9F%BA%E7%A1%80/3.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/05/09/SpringBoot%E5%9F%BA%E7%A1%80/4.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/05/09/SpringBoot%E5%9F%BA%E7%A1%80/5.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/05/09/SpringBoot%E5%9F%BA%E7%A1%80/6.jpg">
+<meta property="og:image" content="https://github-pages-pics.oss-cn-heyuan.aliyuncs.com/img/Max_Planck_1878.gif">
+<meta property="article:published_time" content="2020-05-09T03:16:38.000Z">
+<meta property="article:modified_time" content="2020-05-09T15:09:08.538Z">
 <meta property="article:author" content="Noel">
-<meta property="article:tag" content="Python">
-<meta property="article:tag" content=" Java">
-<meta property="article:tag" content=" Go">
-<meta property="article:tag" content=" 爬虫">
-<meta property="article:tag" content=" 深度学习">
-<meta property="article:tag" content=" 服务研发">
-<meta property="article:tag" content=" 对象存储">
+<meta property="article:tag" content="SpringBoot">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/09/SpringBoot%E5%9F%BA%E7%A1%80/1.jpg">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2020/05/09/SpringBoot%E5%9F%BA%E7%A1%80/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Noel-CyberSpace</title>
+  <title>SpringBoot基础 | Noel-CyberSpace</title>
   
 
 
@@ -152,9 +157,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -170,10 +176,9 @@
       <meta itemprop="name" content="Noel-CyberSpace">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/09/SpringBoot%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">SpringBoot基础</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          SpringBoot基础
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -197,7 +202,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="一、Spring-Boot-入门"><a href="#一、Spring-Boot-入门" class="headerlink" title="一、Spring Boot 入门"></a><strong>一、</strong>Spring Boot 入门</h1><h2 id="1、Spring-Boot-简介"><a href="#1、Spring-Boot-简介" class="headerlink" title="1、Spring Boot 简介"></a>1、Spring Boot 简介</h2><blockquote>
+        <h1 id="一、Spring-Boot-入门"><a href="#一、Spring-Boot-入门" class="headerlink" title="一、Spring Boot 入门"></a><strong>一、</strong>Spring Boot 入门</h1><h2 id="1、Spring-Boot-简介"><a href="#1、Spring-Boot-简介" class="headerlink" title="1、Spring Boot 简介"></a>1、Spring Boot 简介</h2><blockquote>
 <p>简化Spring应用开发的一个框架；</p>
 <p>整个Spring技术栈的一个大整合；</p>
 <p>J2EE开发的一站式解决方案；</p>
@@ -282,87 +287,33 @@
 </ul>
 <p><img src="https://github-pages-pics.oss-cn-heyuan.aliyuncs.com/img/Max_Planck_1878.gif" alt="Max_Planck_1878"></p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/SpringBoot/" rel="tag"># SpringBoot</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/08/hello-world/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Noel">
-      <meta itemprop="description" content="涉猎的主要编程语言为 Python、Java、Go，领域涵盖服务研发、对象存储等。">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Noel-CyberSpace">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/08/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-08 12:02:14" itemprop="dateCreated datePublished" datetime="2020-05-08T12:02:14+08:00">2020-05-08</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/05/08/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -415,6 +366,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、Spring-Boot-入门"><span class="nav-number">1.</span> <span class="nav-text">一、Spring Boot 入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、Spring-Boot-简介"><span class="nav-number">1.1.</span> <span class="nav-text">1、Spring Boot 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、微服务"><span class="nav-number">1.2.</span> <span class="nav-text">2、微服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、环境准备"><span class="nav-number">1.3.</span> <span class="nav-text">3、环境准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、MAVEN设置"><span class="nav-number">1.3.1.</span> <span class="nav-text">1、MAVEN设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、IDEA设置"><span class="nav-number">1.3.2.</span> <span class="nav-text">2、IDEA设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、Spring-Boot-HelloWorld"><span class="nav-number">1.4.</span> <span class="nav-text">4、Spring Boot HelloWorld</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、创建一个maven工程；（jar）"><span class="nav-number">1.4.1.</span> <span class="nav-text">1、创建一个maven工程；（jar）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、导入spring-boot相关的依赖"><span class="nav-number">1.4.2.</span> <span class="nav-text">2、导入spring boot相关的依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、编写一个主程序；启动Spring-Boot应用"><span class="nav-number">1.4.3.</span> <span class="nav-text">3、编写一个主程序；启动Spring Boot应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、编写相关的Controller"><span class="nav-number">1.4.4.</span> <span class="nav-text">4、编写相关的Controller</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、运行主程序测试"><span class="nav-number">1.4.5.</span> <span class="nav-text">5、运行主程序测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、简化部署"><span class="nav-number">1.4.6.</span> <span class="nav-text">6、简化部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、Hello-World探究"><span class="nav-number">1.5.</span> <span class="nav-text">5、Hello World探究</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、POM文件"><span class="nav-number">1.5.1.</span> <span class="nav-text">1、POM文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、父项目"><span class="nav-number">1.5.1.1.</span> <span class="nav-text">1、父项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、启动器"><span class="nav-number">1.5.1.2.</span> <span class="nav-text">2、启动器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、主程序类，主入口类"><span class="nav-number">1.5.2.</span> <span class="nav-text">2、主程序类，主入口类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、使用Spring-Initializer快速创建Spring-Boot项目"><span class="nav-number">1.6.</span> <span class="nav-text">6、使用Spring Initializer快速创建Spring Boot项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、IDEA：使用-Spring-Initializer快速创建项目"><span class="nav-number">1.6.1.</span> <span class="nav-text">1、IDEA：使用 Spring Initializer快速创建项目</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
